@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ois1.RayView">
+   <children>
+      <Line fx:id="lineRay1" endX="200.0" layoutX="100.0" layoutY="30.0" startY="100.0" visible="false">
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis></Line>
+      <Line fx:id="lineReflected" endX="100.0" layoutX="168.0" layoutY="97.0" startX="-100.0" stroke="#2600ff" visible="false" />
+      <Line fx:id="linePlane" endX="400.0" layoutX="300.0" layoutY="186.0" startX="-400.0" visible="false" />
+      <Line fx:id="lineRefracted" endX="100.0" layoutX="201.0" layoutY="253.0" startX="-100.0" stroke="RED" visible="false" />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#drawPlane" text="Построить" />
+      <Box fx:id="BoxPlane" depth="200.0" height="200.0" layoutX="351.0" layoutY="200.0" rotate="-90.0" visible="false">
+         <rotationAxis>
+            <Point3D x="0.577" y="0.577" z="0.577" />
+         </rotationAxis></Box>
+   </children>
+</AnchorPane>
